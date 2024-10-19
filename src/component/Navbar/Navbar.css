@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Ruge+Boogie&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    transition: margin-left 0.3s ease-in-out;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: linear-gradient(135deg, #43436b5e, #7870795b);
+}
+
+.navbar .logo {
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: "Italianno", cursive;
+    /* color: rgb(65, 2, 2); */
+    color: white;
+    margin-top: 10px;
+}
+
+.navbar .logo-box img {
+    border-radius: 100%;
+    border: 1px solid white;
+}
+
+.navbar .logo-box {
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+
+
+.side-navbar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: linear-gradient(135deg, #1c1c3c, #4b134f);
+    overflow-x: hidden;
+    transition: width 0.3s ease-in-out;
+    padding-top: 60px;
+    z-index: 1;
+}
+
+.side-navbar.open {
+    width: 60%;
+    /* Adjust width as needed */
+}
+
+.side-navbar a {
+    padding: 10px 15px;
+    text-decoration: none;
+    text-align: start;
+    font-size: 18px;
+    color: white;
+    display: block;
+    transition: background-color 0.4s ease-in-out,
+                transform 0.4s ease-in-out,
+                border-radius 0.4s ease-in-out,
+                text-align 0.4s ease-in-out;
+    z-index: 999;
+}
+
+.side-navbar a:hover {
+    background-color: #1b021d54;
+    transform: translateY(-10px);
+    border-radius: 100px;
+    text-align: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+}
+
+
+.toggle {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    /* Adjust size as needed */
+    height: 30px;
+    /* Adjust size as needed */
+    transition: transform 0.4s ease;
+}
+
+.bar {
+    background-color: #ff5f6b;
+    height: 4px;
+    /* Adjust thickness */
+    width: 100%;
+    /* Full width */
+    margin: 2px 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(4px, 4px);
+}
+
+.toggle.active .bar:nth-child(2) {
+    opacity: 0;
+    /* Hide the middle bar */
+}
+
+.toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(4px, -4px);
+}

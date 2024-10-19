@@ -1,0 +1,151 @@
+/* src/components/Restaurants.css */
+
+.restrauntsDiv {
+    min-height: 100vh;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+
+.restrauntHeader {
+    font-family: "Italianno", cursive;
+    font-weight: 200;
+    font-size: 5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.btn5 {
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 20px auto;
+    display: block;
+}
+
+.btn5:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px #ff007c, 0 0 25px #00d4ff;
+}
+
+/* Updated list styling for restaurants */
+.restaurantsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 15px; /* space between items */
+}
+
+.restaurant-item {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.restaurant-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+.restaurant-item .restairantName {
+    margin-bottom: 10px;
+    color: #ffd900;
+    font-family: "Italianno", cursive;
+    font-weight: 100;
+    text-decoration: underline overline;
+    font-size: 2rem;
+}
+
+.restaurant-item p {
+    margin: 5px 0;
+}
+
+.googleMapLink a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.googleMapLink a:hover {
+    text-decoration: underline;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.buttons > button {
+    margin: 5px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .restaurantsList {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+    .slideshow-container .text {
+        font-size: 2rem;
+    }
+
+    .restrauntHeader {
+        font-size: 36px;
+    }
+
+    .btn5 {
+        padding: 12px 25px;
+        font-size: 16px;
+    }
+
+    ul {
+        font-size: 14px;
+    }
+
+    .restaurant-item h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .buttons {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .restrauntsDiv {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .restrauntHeader {
+        font-size: 28px;
+    }
+
+    .btn5 {
+        width: 100%;
+    }
+
+    ul {
+        font-size: 12px;
+    }
+
+    .restaurant-item h2 {
+        font-size: 1.2rem;
+    }
+}
