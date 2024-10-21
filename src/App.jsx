@@ -7,6 +7,7 @@ import NutritionAnalysis from './component/NutritionAnalysis/NutritionAnalysis';
 import Restaurants from './component/Restaurants/Restaurants';
 import Navbar from './component/Navbar/Navbar';
 import Footer from './component/Footer/Footer';
+import FavoriteRecipes from './component/FavoriteRecipes/FavoriteRecipes';
 // import SLIDESHOW from './component/Restaurants/SLIDESHOW';
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/recipe-search" element={<RecipeSearch />} />
         <Route path="/nutrition-analysis" element={<NutritionAnalysis />} />
         <Route path="/restaurants" element={<Restaurants />} />
+        <Route path="/favorite-recipes" element={<FavoriteRecipes />} />
       </Routes>
       <Footer/>
     </Router>

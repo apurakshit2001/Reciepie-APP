@@ -1,0 +1,131 @@
+
+
+.favorite-recipes-page {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #00d4ff;
+}
+
+.recipeTxt {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.7);
+    text-align: center;
+}
+
+/* Favorite Recipes List */
+.favorite-recipes-list {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Recipe Card */
+.recipe-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #00d4ff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.recipe-card:hover {
+    transform: translateY(-5px);
+}
+
+.leftBox {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.recipeName {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ff007c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.recipeImg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.rightBox {
+    flex: 1;
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.rightBox .recipeTxt{
+    font-size: 14px;
+    margin-bottom: 8px;
+    line-height: 1.5;
+}
+
+.btn-remove {
+    align-self: flex-start;
+    background: transparent;
+    padding: 8px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+.btn-remove:hover {
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 15px #ff007c, 0 0 25px #00d4ff;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .recipe-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rightBox {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .recipeImg {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    .btn-remove {
+        width: 100%;
+    }
+}

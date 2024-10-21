@@ -36,6 +36,7 @@ const Navbar = () => {
                     <span><Link className="no-decoration" to="/recipe-search" onClick={toggleMenu}>Recipe Search</Link></span>
                     <span><Link className="no-decoration" to="/nutrition-analysis" onClick={toggleMenu}>Nutrition Analysis</Link></span>
                     <span><Link className="no-decoration" to="/restaurants" onClick={toggleMenu}>Search Restaurants Near Me</Link></span>
+                    <span><Link className="no-decoration" to="/favorite-recipes" onClick={toggleMenu}>Favorite Recipes</Link></span>
                 </div>
             </div>
         </>

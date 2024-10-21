@@ -1,0 +1,170 @@
+.recipePage {
+    padding: 20px;
+}
+
+.slideHere {
+    margin-bottom: 20px;
+}
+
+
+.recipe-inputContainer {
+    margin-bottom: 30px;
+}
+
+.recipe-inputContainer input[type="text"] {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 50px;
+    width: 60%;
+    max-width: 400px;
+    box-shadow: 0 0 15px #ff007c, 0 0 25px #00d4ff;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+.recipe-inputContainer input[type="text"]:focus {
+    box-shadow: 0 0 25px #ff007c, 0 0 35px #00d4ff, 0 0 45px #ffffff3b, 0 0 55px #000000;
+}
+
+.recipeHeading {
+    letter-spacing: 30px;
+    text-align: center;
+    font-size: 3em;
+    margin: 20px 0;
+    text-decoration: overline underline;
+    font-family: "Italianno", cursive;
+}
+
+.recipe-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    color: white;
+    margin: 15px;
+}
+
+.leftBox {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.recipeName {
+    font-size: 1.7rem !important;
+    margin-bottom: 10px;
+    color: #ff007c;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.recipeImg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.rightBox {
+    display: flex !important;
+    flex-direction: column;
+    flex: 2;
+    padding-left: 20px;
+}
+
+.rightBox .rightUpper {
+    display: flex;
+}
+
+.rightBox .rightUpper .IngredientsList {
+    text-align: left;
+    width: 90%;
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.rightUpperRight {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.rightBox .rightLower {
+    text-align: left;
+    padding: 10px;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.rightLowerRightSide {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btn3-1,
+.btn3-2,
+.btn3-3 {
+    padding: 10px 15px;
+}
+.paginationButtons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.paginationButtons button{
+    margin: 0 5px;
+}
+
+
+@media screen and (max-width: 568px) {
+    .recipe-inputContainer input[type="text"] {
+        width: 80%;
+        margin: 10px;
+    }
+
+    .searchBtn {
+        padding: 15px 20px;
+    }
+
+    .recipeHeading {
+        font-size: 2em;
+        letter-spacing: 2px;
+    }
+
+    .recipeName {
+        font-size: 1.5rem !important;
+    }
+
+    .rightLowerRightSide {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap: 5px;
+    }
+.rightUpperRight,
+.rightUpperLeft{
+    flex: 1;
+}
+    .btn3-1,
+    .btn3-2,
+    .btn3-3 {
+        min-width: 75vw;
+    }
+
+    .IngredientsHeading {
+        text-align-last: right ;
+    }
+}
