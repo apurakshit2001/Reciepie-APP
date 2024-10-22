@@ -63,14 +63,14 @@
 }
 
 .side-navbar.open {
-    width: 60%;
+    width: 30%;
     /* Adjust width as needed */
 }
 
 .side-navbar a {
-    padding: 10px 15px;
+    padding: 20px 15px;
     text-decoration: none;
-    text-align: start;
+    text-align: center;
     font-size: 18px;
     color: white;
     display: block;
@@ -80,10 +80,16 @@
                 text-align 0.4s ease-in-out;
     z-index: 999;
 }
-
+@media screen and (max-width:570px) {
+    .side-navbar.open {
+        width: 60%;
+    }
+    .side-navbar a {
+        padding: 20px 15px;}
+}
 .side-navbar a:hover {
     background-color: #1b021d54;
-    transform: translateY(-10px);
+    transform: translateY(-3px);
     border-radius: 100px;
     text-align: center;
 }
