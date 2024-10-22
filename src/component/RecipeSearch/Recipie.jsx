@@ -4,6 +4,7 @@ import { InfinitySpin } from 'react-loader-spinner';
 import React, { useContext, useEffect, useState } from 'react';
 import Slideshow from '../Restaurants/SLIDESHOW';
 import { UserContext } from '../ContextAPI/Context';
+import { useNavigate } from 'react-router-dom';
 
 const Recipe = () => {
     const [recipes, setRecipes] = useState([]);
@@ -46,12 +47,14 @@ const Recipe = () => {
         }
     };
 
-    const handleingredientNutritionsAnalysis = (ingredients) => {
-        console.log('Nutrition analysis for ingredients:', ingredients);
+
+    const { addToFavorites, nutritionAnalysis } = useContext(UserContext);
+    const navigate = useNavigate();
+
+    const handleingredientNutritionsAnalysis = (recipe) => {
+        nutritionAnalysis(recipe); 
+        navigate('/nutrition-analysis');
     };
-
-    const { addToFavorites } = useContext(UserContext);
-
     const handleAddToFavorite = (recipe) => {
         addToFavorites(recipe);
         console.log('Adding recipe to favorite:', recipe);
@@ -132,7 +135,7 @@ const Recipe = () => {
                                                     <span>View Full Recipe</span>
                                                 </button>
                                             </a>
-                                            <button className='btn2 btn3-2' onClick={() => handleingredientNutritionsAnalysis(recipe.recipe.ingredientLines)}>
+                                            <button className='btn2 btn3-2' onClick={() => handleingredientNutritionsAnalysis(recipe.recipe)}>
                                                 <span>Nutrition Analysis</span>
                                             </button>
                                             <button className='btn1 btn3-3' onClick={() => handleAddToFavorite(recipe.recipe)}>

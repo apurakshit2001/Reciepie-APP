@@ -2,9 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Restaurants.css';
 import './Slideshow.css';
-import restaurantImg1 from '../../assets/restaurant.jpg';
-import restaurantImg2 from '../../assets/restaurant2.jpg';
-import restaurantImg3 from '../../assets/restaurant3.jpg';
 import { InfinitySpin } from 'react-loader-spinner';
 import Slideshow from './SLIDESHOW';
 

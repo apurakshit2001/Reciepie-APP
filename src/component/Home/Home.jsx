@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../Navbar/Navbar';
 import './Home.css';
 import { Link } from 'react-router-dom';
@@ -7,17 +7,38 @@ import nutritionimg from '../../assets/nutrition.png';
 import restaurantimg from '../../assets/restaurant.jpg';
 
 const Home = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show');
+        }
+      });
+    });
+
+    const hiddenElements = document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => {
+      observer.observe(el);
+    });
+
+    return () => {
+      hiddenElements.forEach((el) => observer.unobserve(el));
+    };
+  }, []);
+
   return (
     <div className="home">
-      <div className="hero">
-        <h1>Welcome to Recipe Haven</h1>
+      <div className="hero ">
+        <h1>Welcome <span className='to'>to</span> Recipe <span className='Italianno'>Haven</span></h1>
         <p>Your ultimate destination for delicious recipes and nutrition insights.</p>
         <button className="get-started-btn">
-          <span><Link className="no-decoration"  to='/recipe-search'>Get Started</Link></span>
+          <span><Link className="no-decoration" to='/recipe-search'>Get Started</Link></span>
         </button>
       </div>
 
-      <div className="recipie other-section">
+      <div className="recipie other-section hidden">
         <h2>Explore Our Recipes</h2>
         <p>Discover a world of delicious recipes and cooking inspiration.</p>
         <div className="description">
@@ -28,13 +49,13 @@ const Home = () => {
               Tender chicken marinated in yogurt and spices, then cooked to perfection in a creamy tomato-based sauce. Served with rice and naan, this dish is a must-try for any Indian food lover.
             </p>
             <button className="explore-btn btn2">
-              <span><Link className="no-decoration"  to='/recipe-search'>Explore Recipes</Link></span>
+              <span><Link className="no-decoration" to='/recipe-search'>Explore Recipes</Link></span>
             </button>
           </div>
         </div>
       </div>
 
-      <div className="nutrition other-section">
+      <div className="nutrition other-section hidden">
         <h2>Get Nutrition Insights</h2>
         <p>Access detailed nutrition information for your favorite dishes.</p>
         <div className="description">
@@ -43,13 +64,13 @@ const Home = () => {
             <h1>Nutritional Analysis</h1>
             <p>Stay informed about the nutritional content of your meals. Our platform provides detailed insights on calories, macronutrients, and vitamins to help you make healthier choices.</p>
             <button className="get-nutrition-btn btn3">
-              <span><Link className="no-decoration"  to='/nutrition-analysis'>Explore Nutrition</Link></span>
+              <span><Link className="no-decoration" to='/nutrition-analysis'>Explore Nutrition</Link></span>
             </button>
           </div>
         </div>
       </div>
 
-      <div className="nerbyRestaurants other-section">
+      <div className="nerbyRestaurants other-section hidden">
         <h2>Find Nearby Restaurants</h2>
         <p>Discover local restaurants near you and explore their menus.</p>
         <div className="description">
@@ -58,7 +79,7 @@ const Home = () => {
             <h1>Local Dining</h1>
             <p>Whether you're craving pizza, sushi, or a cozy café, find the best local dining options at your fingertips. Check out reviews and explore menus from restaurants near you.</p>
             <button className="find-restaurants-btn btn1">
-              <span><Link className="no-decoration"  to='/restaurants'>Find Restaurants</Link></span>
+              <span><Link className="no-decoration" to='/restaurants'>Find Restaurants</Link></span>
             </button>
           </div>
         </div>

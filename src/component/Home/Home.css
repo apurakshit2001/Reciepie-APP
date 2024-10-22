@@ -1,11 +1,28 @@
 /* src/components/Home.css */
 
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+    filter: blur(15px) !important;
+    transform: translateX(-50%) !important;
+  }
+  
+  .show {
+    opacity: 1;
+    filter: blur(0) !important;
+    transform: translateX(0) !important;
+  }
+  
 .hero {
-    min-height: 60vh;
-    margin: 20px;
+    min-height: 80vh;
+    margin: 30px;
     padding: 20px;
     border-radius: 15px;
     background-color: rgba(0, 0, 0, 0.5);
+    background-image: url(../../assets/restaurant3.jpg);
+    filter: saturate(2);
+    background-attachment: fixed;
+    background-size: cover;
     color: white;
     display: flex;
     flex-direction: column;
@@ -17,17 +34,41 @@
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: white;
+    text-shadow: 1px 1px 10px rgb(0, 0, 0),
+        1px 1px 10px rgb(0, 0, 0),
+        1px 1px 10px rgb(0, 0, 0),
+        1px 1px 10px rgb(0, 0, 0),
+        1px 1px 10px rgb(255, 255, 255);
 }
 
 .hero p {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 40px;
+    font-family: "Italianno", cursive;
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 1px 10px rgb(0, 0, 0),
+        1px 1px 10px rgb(0, 0, 0),
+        1px 1px 10px rgb(0, 0, 0),
+        1px 1px 10px rgb(0, 0, 0),
+        1px 1px 10px rgb(0, 0, 0);
+}
+
+.hero span {
+    font-size: 50px;
+    margin-bottom: 40px;
+    font-family: "Italianno", cursive;
 }
 
 @media screen and (max-width: 500px) {
-    /* .hero {
-        min-height: 50vh;
-    } */
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero .to {
+        color: black;
+        font-weight: 900;
+    }
 
     .hero h1 {
         font-size: 32px;
@@ -41,7 +82,7 @@
 .get-started-btn {
     position: relative;
     padding: 15px 40px;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.205);
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 30px;
     overflow: hidden;
@@ -49,6 +90,7 @@
     transition: 0.3s ease-in-out;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
+    filter: saturate(0.5);
 }
 
 .get-started-btn span {
@@ -157,8 +199,8 @@
     flex-direction: column;
 }
 
-.nutrition h2,  
-.nerbyRestaurants h2{
+.nutrition h2,
+.nerbyRestaurants h2 {
     text-align: right;
 }
 
@@ -171,7 +213,8 @@
     filter: brightness(0.8);
     transition: all .5s ease-in-out;
 }
-img:hover{
+
+img:hover {
     filter: brightness(1);
 }
 
