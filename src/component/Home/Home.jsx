@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import chickenimg from '../../assets/chicken-tikka-masala.webp';
 import nutritionimg from '../../assets/nutrition.png';
 import restaurantimg from '../../assets/restaurant.jpg';
+import banner from '../../assets/banner.png';
 
 const Home = () => {
   useEffect(() => {
@@ -30,12 +31,15 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div className="hero ">
-        <h1>Welcome <span className='to'>to</span> Recipe <span className='Italianno'>Haven</span></h1>
-        <p>Your ultimate destination for delicious recipes and nutrition insights.</p>
+      <div className="hero">
+        <div className="heroTextContainer">
+          <h1 className='heroMainTxt'><span className='large'>Welcome to,</span> <br /> <span className='title'>Recipe Haven</span></h1>
+          <h1 className='heroPara'>Your ultimate destination for delicious recipes and nutrition insights.</h1>
         <button className="get-started-btn">
           <span><Link className="no-decoration" to='/recipe-search'>Get Started</Link></span>
         </button>
+        </div>
+        <img src={banner} alt="" className="rightSide" />
       </div>
 
       <div className="recipie other-section hidden">

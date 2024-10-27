@@ -129,6 +129,11 @@
 }
 
 
+@media screen and (max-width: 1300px) {
+    .recipe-card{
+        margin: 15px auto;
+    }
+}
 @media screen and (max-width: 568px) {
     .recipe-inputContainer input[type="text"] {
         width: 80%;

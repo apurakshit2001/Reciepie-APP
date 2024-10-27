@@ -11,31 +11,43 @@
     transition: margin-left 0.3s ease-in-out;
     width: 100%;
     display: flex;
-    align-items: center;
+    align-items: center; 
     justify-content: space-between;
-    padding: 10px;
+    padding: 0 10px;
     background: linear-gradient(135deg, #43436b5e, #7870795b);
-}
-
-.navbar .logo {
-    font-size: 3rem;
-    font-weight: 400;
-    font-family: "Italianno", cursive;
-    /* color: rgb(65, 2, 2); */
-    color: white;
-    margin-top: 10px;
-}
-
-.navbar .logo-box img {
-    border-radius: 100%;
-    border: 1px solid white;
+    height: 80px; 
+    box-sizing: border-box;
 }
 
 .navbar .logo-box {
-    gap: 15px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 15px;
+}
+
+.navbar #logoTxt {
+    font-size: 1.5rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    text-shadow: 1px 2px 3px black;
+}
+.outline{
+    color: transparent;
+    text-transform: lowercase;
+    -webkit-text-stroke: 1px white;
+}
+.navbar .logo-box img {
+    border-radius: 50%;
+    border: 1px solid white;
+    height: 50px; 
+    width: 50px;
+    object-fit: cover;
 }
 
 .menu-btn {
@@ -81,6 +93,9 @@
     z-index: 999;
 }
 @media screen and (max-width:570px) {
+    .navbar #logoTxt{
+        font-size: 1rem;
+    }
     .side-navbar.open {
         width: 60%;
     }
