@@ -13,10 +13,11 @@
     display: flex;
     align-items: center; 
     justify-content: space-between;
-    padding: 0 10px;
-    background: linear-gradient(135deg, #43436b5e, #7870795b);
+    padding: 0 20px;
+    background: linear-gradient(135deg, #43436b1a, #78707910);
     height: 80px; 
     box-sizing: border-box;
+    border-radius: 0 0 10px 10px;
 }
 
 .navbar .logo-box {
@@ -26,6 +27,10 @@
 }
 
 .navbar #logoTxt {
+    background: linear-gradient(135deg, #43436b1a, #78707910);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 2px 2px;
     font-size: 1.5rem;
     font-weight: 500;
     font-family: Arial, Helvetica, sans-serif;
@@ -112,8 +117,8 @@
 
 .close-btn {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 40px;
     cursor: pointer;
 }
 
