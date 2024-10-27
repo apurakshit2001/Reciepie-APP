@@ -40,7 +40,7 @@
     align-self: start;
     text-align: left;
     padding: 0 100px;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .hero .heroMainTxt {
@@ -83,8 +83,29 @@
     filter: drop-shadow(5px 5px 20px black) contrast(1) brightness(0.8);
 }
 
+/* @media screen and (max-width: 1200px) {
+    .hero .heroTextContainer {
+       margin-top: 100px;
+    }
+} */
 
-
+@media screen and (max-width: 1200px) {
+    .hero .heroTextContainer {
+        padding-left: 100px;
+        
+        flex: 3;
+        padding-right: 0;
+    }
+    .hero .rightSide {
+        max-width: 400px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .hero .rightSide {
+        max-width: 300px;
+        height: 100%;
+    }
+}
 @media screen and (max-width: 700px) {
     .hero {
         min-height: 60vh;
@@ -250,7 +271,7 @@ img:hover {
     filter: brightness(1);
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     .other-section img {
         height: 300px;
         width: 100%;
@@ -272,5 +293,10 @@ img:hover {
     .other-section .des-txt h1 {
         font-size: 30px;
         width: 100%;
+    }
+}
+@media screen and (max-width: 660px) {
+    .hero{
+        padding-top: 50px;
     }
 }
