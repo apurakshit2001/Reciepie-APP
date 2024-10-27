@@ -8,12 +8,14 @@ import Restaurants from './component/Restaurants/Restaurants';
 import Navbar from './component/Navbar/Navbar';
 import Footer from './component/Footer/Footer';
 import FavoriteRecipes from './component/FavoriteRecipes/FavoriteRecipes';
+import UPArrow from './component/upArrow/UPArrow';
 // import SLIDESHOW from './component/Restaurants/SLIDESHOW';
+
 
 const App = () => {
   return (
     <Router>
-      <Navbar/>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipe-search" element={<RecipeSearch />} />
@@ -21,7 +23,10 @@ const App = () => {
         <Route path="/restaurants" element={<Restaurants />} />
         <Route path="/favorite-recipes" element={<FavoriteRecipes />} />
       </Routes>
-      <Footer/>
+      <div className='upArrow'>
+        <a className='arrow' href="#">⬆️</a>
+      </div>
+      <Footer />
     </Router>
     // <SLIDESHOW/>
   );

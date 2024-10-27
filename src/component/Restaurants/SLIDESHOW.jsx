@@ -15,7 +15,7 @@ const Slideshow = () => {
     useEffect(() => {
         const timer = setInterval(() => {
             setSlideIndex((prevIndex) => (prevIndex + 1) % slides.length);
-        }, 4000); // Change slide every 4 seconds
+        }, 2500); // Change slide every 2.5 seconds
 
         return () => clearInterval(timer);
     }, [slides.length]);
