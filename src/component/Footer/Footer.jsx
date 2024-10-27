@@ -157,7 +157,9 @@ const Footer = () => {
                       <div className="widget">
                         <h4 className="widget-title mb-4">Our Newsletter</h4>
                         <p className="mb-4">Never miss out on our company's latest news, updates, and exclusive offers! Subscribe to our newsletter today and get the inside scoop delivered straight to your inbox.</p>
-                        <form action="#!" onSubmit={handleSubscription}>
+                        <form action="#!"
+                        //  onSubmit={handleSubscription}
+                         >
                           <div className="row gy-4">
                             <div className="col-12">
                               <div className="input-group">
@@ -166,8 +168,9 @@ const Footer = () => {
                                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                                   </svg>
                                 </span>
-                                <input type="email" className="form-control" id="email-newsletter" value={email}
-                                  onChange={(e) => setEmail(e.target.value)}
+                                <input type="email" className="form-control" id="email-newsletter" 
+                                //value={email}
+                                  // onChange={(e) => setEmail(e.target.value)}
                                   placeholder="Email Address"
                                   aria-label="email-newsletter"
                                   aria-describedby="email-newsletter-addon"
