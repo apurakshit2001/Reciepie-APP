@@ -1,6 +1,32 @@
-import React from 'react';
-import logo from '../../assets/logo3.png'; 
+import React, { useState } from 'react';
+import axios from 'axios';
+import logo from '../../assets/logo3.png';
 const Footer = () => {
+
+  const [email, setEmail] = useState("");
+
+  const handleSubscription = (e) => {
+    e.preventDefault();
+
+    // Check if email is valid
+    if (!email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+
+    // API request to subscribe the email
+    axios.post('https://example.com/api/subscribe', { email })
+      .then(response => {
+        alert("Subscription successful!");
+        console.log("Response:", response.data);
+        setEmail(""); // Clear the email input field
+      })
+      .catch(error => {
+        alert("Failed to subscribe. Please try again.");
+        console.error("Error:", error);
+      });
+  };
+
   return (
     <footer className="footer">
       <section>
@@ -11,7 +37,7 @@ const Footer = () => {
                 <div className="col-12 col-md-11 col-xl-10">
                   <div className="footer-logo-wrapper">
                     <a href="#!">
-                      <img src={logo} alt="BootstrapBrain Logo" width="60" height="60"/>
+                      <img src={logo} alt="BootstrapBrain Logo" width="60" height="60" />
                     </a>
                   </div>
                   <div className="social-media-wrapper mt-5">
@@ -122,7 +148,7 @@ const Footer = () => {
                       <div className="widget">
                         <h4 className="widget-title mb-4">Our Newsletter</h4>
                         <p className="mb-4">Never miss out on our company's latest news, updates, and exclusive offers! Subscribe to our newsletter today and get the inside scoop delivered straight to your inbox.</p>
-                        <form action="#!">
+                        <form action="#!" onSubmit={handleSubscription}>
                           <div className="row gy-4">
                             <div className="col-12">
                               <div className="input-group">
@@ -131,13 +157,19 @@ const Footer = () => {
                                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                                   </svg>
                                 </span>
-                                <input type="email" className="form-control" id="email-newsletter" value="" placeholder="Email Address" aria-label="email-newsletter" aria-describedby="email-newsletter-addon" required/>
+                                <input type="email" className="form-control" id="email-newsletter" value={email}
+                                  onChange={(e) => setEmail(e.target.value)}
+                                  placeholder="Email Address"
+                                  aria-label="email-newsletter"
+                                  aria-describedby="email-newsletter-addon"
+                                  required
+                                />
                               </div>
                             </div>
                             <div className="col-12">
                               <div className="d-grid">
                                 <button className=" btn2" type="submit">
-                                    <span>Subscribe</span>
+                                  <span>Subscribe</span>
                                 </button>
                               </div>
                             </div>
@@ -160,7 +192,7 @@ const Footer = () => {
           </div>
         </div>
       </section>
-    
+
     </footer>
   );
 };
