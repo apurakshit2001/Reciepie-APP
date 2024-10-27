@@ -96,10 +96,11 @@ const Restaurants = () => {
                                         <p><strong>Rating:</strong> {place.rating}</p>
                                         <p><strong>User Rating Total:</strong> {place.user_ratings_total}</p>
                                         <p>
-                                            <strong>Google Map Link:</strong> {place.photos ? (
-                                                <span className='googleMapLink' dangerouslySetInnerHTML={{
-                                                    __html: place.photos[0].html_attributions[0].replace('<a ', '<a target="_blank" rel="noopener noreferrer" ')
-                                                }} />
+                                            <strong>Google Map Link:</strong>
+                                            {place.photos ? (
+                                                <button className='btn1 googleLink' onClick={() => window.open(place.photos[0].html_attributions[0].match(/href="([^"]+)"/)[1], '_blank')}>
+                                                    <span>Open Google Map</span>
+                                                </button>
                                             ) : 'N/A'}
                                         </p>
                                         <p><strong>Address:</strong> {place.vicinity}</p>
