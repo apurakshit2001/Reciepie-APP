@@ -3,30 +3,39 @@ import axios from 'axios';
 import logo from '../../assets/logo3.png';
 const Footer = () => {
 
-  const [email, setEmail] = useState("");
+  // const [email, setEmail] = useState('');
+  //    const [error, setError] = useState(null);
+  //    const [success, setSuccess] = useState(null); 
 
-  const handleSubscription = (e) => {
-    e.preventDefault();
+  //    const handleSubscription = () => {
 
-    // Check if email is valid
-    if (!email || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(email)) {
-      alert("Please enter a valid email address.");
-      return;
-    }
+  //      const url = 'https://cors-anywhere.herokuapp.com/https://us8.api.mailchimp.com/3.0/lists/9c68422a20/members';
 
-    // API request to subscribe the email
-    axios.post('https://example.com/api/subscribe', { email })
-      .then(response => {
-        alert("Subscription successful!");
-        console.log("Response:", response.data);
-        setEmail(""); // Clear the email input field
-      })
-      .catch(error => {
-        alert("Failed to subscribe. Please try again.");
-        console.error("Error:", error);
-      });
-  };
 
+  //      const data = {
+  //        email_address: email,
+  //        status: 'subscribed',
+  //      };
+
+
+  //      axios.post(url, data, {
+  //        headers: {
+  //          'Authorization': `apikey 58fa853e9cd6b466a956be537b55cca5-us8`,
+  //          'Content-Type': 'application/json',
+  //        }
+  //      })
+  //      .then(response => {
+  //        console.log('Success!', response.data);
+  //        setSuccess('Subscription successful!'); 
+  //        setEmail('');
+  //        setError(null); 
+  //      })
+  //      .catch(error => {
+  //        console.error('Error subscribing:', error);
+  //        setError('Subscription failed. Please try again.'); 
+  //        setSuccess(null); 
+  //      });
+  //    }; 
   return (
     <footer className="footer">
       <section>
