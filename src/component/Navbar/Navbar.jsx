@@ -13,12 +13,12 @@ const Navbar = () => {
     return (
         <>
             <div className="navbar">
-                <div className="menu-btn openMenuButton" onClick={toggleMenu}>
+                <div className="menu-btn openMenuButton" >
                     <div className="logo-box">
                         <img src={logo} alt=""/>
                         <h1 id='logoTxt'>R<span className="outline">ecipe</span> H<span className="outline">aven</span></h1>
                     </div>
-                    <div className={`toggle ${isMenuOpen ? 'active' : ''}`}>
+                    <div onClick={toggleMenu} className={`toggle ${isMenuOpen ? 'active' : ''}`}>
                         <div className="bar"></div>
                         <div className="bar"></div>
                         <div className="bar"></div>
