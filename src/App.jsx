@@ -8,7 +8,6 @@ import Restaurants from './component/Restaurants/Restaurants';
 import Navbar from './component/Navbar/Navbar';
 import Footer from './component/Footer/Footer';
 import FavoriteRecipes from './component/FavoriteRecipes/FavoriteRecipes';
-import UPArrow from './component/upArrow/UPArrow';
 // import SLIDESHOW from './component/Restaurants/SLIDESHOW';
 
 
@@ -24,7 +23,7 @@ const App = () => {
         <Route path="/favorite-recipes" element={<FavoriteRecipes />} />
       </Routes>
       <div className='upArrow'>
-        <a className='arrow' href="#">⬆️</a>
+        <a className='arrow' href="#">↑</a>
       </div>
       <Footer />
     </Router>
