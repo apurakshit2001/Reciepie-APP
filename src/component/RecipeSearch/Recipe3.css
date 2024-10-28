@@ -243,7 +243,8 @@
 
 .trendYrecipeImg {
     width: 300px;
-    height: 300px;
+    min-height: 300px;
+    max-height: 300px;
     object-fit: cover;
     height: auto;
     border-radius: 15px;
