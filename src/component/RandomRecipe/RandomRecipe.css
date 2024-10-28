@@ -1,0 +1,137 @@
+/* RandomRecipe.css */
+
+.randomRecipe-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background-color: #fff;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  
+  .randomLeftSide,
+  .randomRightSide {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  .upperFlex{
+    display: flex;
+    justify-content: space-around;
+  }
+  .randomLeftSide {
+    flex: 1;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  
+  .randomRightSide {
+    flex: 2;
+    background-color: #ffffff;
+  }
+  
+  .randomRecipe-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .randomRecipe-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    max-height: 300px;
+  }
+  
+  .randomMain {
+    margin-bottom: 20px;
+  }
+
+  .randomRecipe-category,
+  .randomRecipe-cuisine {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .randomRecipe-instructionsTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .randomRecipe-instructions {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+  }
+  .randomRightLower{
+    display: flex;
+  }
+  .randomPoints {
+    margin-top: 20px;
+    flex: 1;
+  }
+  
+  .randomRecipe-ingredientsTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .randomRecipe-ingredients {
+    padding: 0;
+    height: 200px;
+    box-shadow: 3px 3px;
+    overflow-y: scroll;
+  }
+  
+  .randomRecipe-ingredient {
+    font-size: 16px;
+    color: #555;
+    padding: 5px 0;
+  }
+  
+  .randomLinks {
+    flex: 1;
+    margin-top: 20px;
+  }
+  
+  .randomRecipe-tags,
+  .randomRecipe-youtube,
+  .randomRecipe-source {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .randomRecipe-youtube a,
+  .randomRecipe-source a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .randomRecipe-youtube a:hover,
+  .randomRecipe-source a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .randomRecipe-container {
+      flex-direction: column;
+    }
+    .randomRecipe-instructions {
+        height: 300px;
+        overflow-y: scroll;
+        box-shadow: 3px 3px;
+        padding: 10px 0;
+    }
+  }
+  

@@ -1,53 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
-.Italianno{
+
+.Italianno {
   font-family: 'Italianno', cursive;
 }
-body{
+
+body {
   background: linear-gradient(135deg, #1c1c3c, #4b134f);
   font-family: 'Poppins', sans-serif;
 }
-.bg1{
+
+.bg1 {
   background: linear-gradient(135deg, #1c1c3c, #4b134f);
   color: white;
 }
-.bg2{
+
+.bg2 {
   background: linear-gradient(135deg, #4b134f, #1c1c3c);
   color: white;
 }
-.bg3{
+
+.bg3 {
   background: linear-gradient(135deg, #1c1c3c, #4b134f);
   color: white;
 }
-.bg4{
+
+.bg4 {
   background: linear-gradient(135deg, #4b134f, #1c1c3c);
   color: white;
 }
-.bg5{
+
+.bg5 {
   background: linear-gradient(135deg, #1c1c3c, #4b134f);
   color: white;
 }
-@media screen and (max-width: 568px){
+
+@media screen and (max-width: 568px) {
   ::-webkit-scrollbar {
     display: none;
   }
 }
+
 ::-webkit-scrollbar {
   width: 10px;
 }
+
 ::-webkit-scrollbar-thumb {
-  background-color: red; 
-  border-radius: 5px; 
+  background-color: red;
+  border-radius: 5px;
 }
+
 ::-webkit-scrollbar-track {
   background-color: #1c1c3c;
   height: 100vh;
 }
+
 button {
   position: relative;
   padding: 15px 40px;
@@ -70,9 +83,10 @@ button span {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
+
 .no-decoration {
   text-decoration: none;
-  color: inherit; 
+  color: inherit;
 }
 
 button::before {
@@ -87,7 +101,7 @@ button::before {
   filter: blur(15px);
 }
 
-.btn1::before{
+.btn1::before {
   background: linear-gradient(120deg, #ff007c, #00d4ff);
 }
 
@@ -130,39 +144,42 @@ button span:hover {
   color: #ff007c;
 }
 
-.btn5{
+.btn5 {
   background: linear-gradient(145deg, #0a0a0a, #1f1f1f);
-      border: none;
-      padding: 15px 40px;
-      border-radius: 50px;
-      font-size: 18px;
-      color: #fff;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      cursor: pointer;
-      position: relative;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2),
-                  0 8px 30px rgba(0, 0, 0, 0.4),
-                  inset 0 -2px 5px rgba(255, 255, 255, 0.1),
-                  inset 0 2px 15px rgba(0, 0, 0, 0.2);
-      transition: 0.3s ease-in-out;
-      overflow: hidden;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 50px;
+  font-size: 18px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2),
+    0 8px 30px rgba(0, 0, 0, 0.4),
+    inset 0 -2px 5px rgba(255, 255, 255, 0.1),
+    inset 0 2px 15px rgba(0, 0, 0, 0.2);
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
 }
+
 .btn5:hover {
   background: linear-gradient(145deg, #1f1f1f, #3a3a3a);
   transform: translateY(-5px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5),
-              0 15px 60px rgba(0, 0, 0, 0.8),
-              inset 0 -2px 5px rgba(255, 255, 255, 0.2),
-              inset 0 5px 20px rgba(0, 0, 0, 0.4);
+    0 15px 60px rgba(0, 0, 0, 0.8),
+    inset 0 -2px 5px rgba(255, 255, 255, 0.2),
+    inset 0 5px 20px rgba(0, 0, 0, 0.4);
 }
+
 .btn5:active {
   background: linear-gradient(145deg, #0a0a0a, #1a1a1a);
   transform: translateY(2px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3),
-              inset 0 -2px 5px rgba(255, 255, 255, 0.1),
-              inset 0 1px 10px rgba(0, 0, 0, 0.3);
+    inset 0 -2px 5px rgba(255, 255, 255, 0.1),
+    inset 0 1px 10px rgba(0, 0, 0, 0.3);
 }
+
 .btn5::before {
   content: '';
   position: absolute;
@@ -174,6 +191,7 @@ button span:hover {
   transform: translateX(-50%) translateY(-50%) rotate(50deg);
   transition: 0.6s ease-in-out;
 }
+
 .btn5:hover::before {
   transform: translateX(-50%) translateY(-50%) rotate(0deg);
 }
@@ -194,5 +212,5 @@ button span:hover {
   padding: 5px 7px;
   border-radius: 5px;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3),
-  2px 3px 5px white;
+    2px 3px 5px white;
 }

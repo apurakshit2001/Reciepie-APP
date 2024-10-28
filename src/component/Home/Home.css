@@ -40,6 +40,7 @@
     align-self: start;
     text-align: left;
     padding: 100px;
+    gap: 10px;
 }
 
 .hero .heroMainTxt {
@@ -70,6 +71,7 @@
 .hero .heroPara {
     text-align: left;
     font-size: 20px;
+    line-height: 1.7;
     color: rgb(189, 182, 151);
     text-shadow: 1px 1px 10px rgb(0, 0, 0),
         1px 1px 10px rgb(0, 0, 0),

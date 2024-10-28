@@ -10,6 +10,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import Slideshow from '../Restaurants/SLIDESHOW';
 import { UserContext } from '../ContextAPI/Context';
 import { useNavigate } from 'react-router-dom';
+import RandomRecipe from '../RandomRecipe/RandomRecipe';
 
 const Recipe = () => {
     const [recipes, setRecipes] = useState([]);
@@ -98,24 +99,7 @@ const Recipe = () => {
             calories: 350,
             cuisineType: ["Asian"],
             mealType: ["Lunch", "Dinner"]
-        },
-        {
-            id: 4,
-            label: "Beef Tacos",
-            image: tacos,
-            calories: 500,
-            cuisineType: ["Mexican"],
-            mealType: ["Lunch", "Dinner"]
-        },
-        {
-            id: 5,
-            label: "Caesar Salad",
-            image: salad,
-            calories: 300,
-            cuisineType: ["Italian"],
-            mealType: ["Lunch"]
-        },
-        // Add more trending recipes ....
+        }
     ];
 
     const searchThisRecipe = (recipe) => {
@@ -153,6 +137,7 @@ const Recipe = () => {
                     <div className="error-message">{error}</div>
                 ) : query === '' ? ( // Check if query is empty
                     <div className="empty-state">
+                        <RandomRecipe/>
                         <div className="trendyRecipes">
                             <h1 className='recipeHeading'>Trending Recipes</h1>
                             <div className="trendYrecipeCardContainer">

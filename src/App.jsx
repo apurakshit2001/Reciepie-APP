@@ -8,7 +8,9 @@ import Restaurants from './component/Restaurants/Restaurants';
 import Navbar from './component/Navbar/Navbar';
 import Footer from './component/Footer/Footer';
 import FavoriteRecipes from './component/FavoriteRecipes/FavoriteRecipes';
-// import SLIDESHOW from './component/Restaurants/SLIDESHOW';
+import FoodNews from './component/FoodNews/FoodNews';
+import HealthNews from './component/HealthNews/HealthNews';
+import QuizComponent from './component/Quiz/QuizComponent';
 
 
 const App = () => {
@@ -18,9 +20,12 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/recipe-search" element={<RecipeSearch />} />
+        <Route path="/favorite-recipes" element={<FavoriteRecipes />} />
         <Route path="/nutrition-analysis" element={<NutritionAnalysis />} />
         <Route path="/restaurants" element={<Restaurants />} />
-        <Route path="/favorite-recipes" element={<FavoriteRecipes />} />
+        <Route path="/foodNews" element={<FoodNews />} />
+        <Route path="/healthNews" element={<HealthNews />} />
+        <Route path="/quiz" element={<QuizComponent />} />
       </Routes>
       <div className='upArrow'>
         <a className='arrow' href="#">↑</a>

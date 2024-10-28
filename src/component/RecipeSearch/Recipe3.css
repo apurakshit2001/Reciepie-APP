@@ -45,9 +45,9 @@
     -webkit-background-clip: text;
 }
 
-.recipeHeading:hover {
-    /* transform: translateY(-5px); */
-}
+/* .recipeHeading:hover {
+    transform: translateY(-5px);
+} */
 
 .recipeHeading::before {
     content: '';
@@ -242,9 +242,9 @@
 }
 
 .trendYrecipeImg {
-    width: 300px;
-    min-height: 300px;
-    max-height: 300px;
+    width: 250px;
+    min-height: 250px;
+    max-height: 250px;
     object-fit: cover;
     height: auto;
     border-radius: 15px;

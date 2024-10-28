@@ -34,9 +34,12 @@ const Navbar = () => {
                     </div>
                     <span><Link className="no-decoration" to="/" onClick={toggleMenu}>Home</Link></span>
                     <span><Link className="no-decoration" to="/recipe-search" onClick={toggleMenu}>Recipe Search</Link></span>
+                    <span><Link className="no-decoration" to="/favorite-recipes" onClick={toggleMenu}>Favorite Recipes</Link></span>
                     <span><Link className="no-decoration" to="/nutrition-analysis" onClick={toggleMenu}>Nutrition Analysis</Link></span>
                     <span><Link className="no-decoration" to="/restaurants" onClick={toggleMenu}>Nearby Restaurants</Link></span>
-                    <span><Link className="no-decoration" to="/favorite-recipes" onClick={toggleMenu}>Favorite Recipes</Link></span>
+                    <span><Link className="no-decoration" to="/foodNews" onClick={toggleMenu}>Food & News</Link></span>
+                    <span><Link className="no-decoration" to="/healthNews" onClick={toggleMenu}>News & Health</Link></span>
+                    <span><Link className="no-decoration" to="/quiz" onClick={toggleMenu}>Food & Quiz</Link></span>
                 </div>
             </div>
         </>
