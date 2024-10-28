@@ -184,6 +184,7 @@ button span:hover {
 }
 
 .upArrow .arrow {
+  border: 1px solid white;
   color: black;
   position: fixed;
   right: 3px;
@@ -192,5 +193,6 @@ button span:hover {
   background-color: #79797973;
   padding: 5px 7px;
   border-radius: 5px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3),
+  2px 3px 5px white;
 }
