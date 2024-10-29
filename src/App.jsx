@@ -1,5 +1,4 @@
-// src/App.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './component/Home/Home';
 import RecipeSearch from './component/RecipeSearch/Recipie';
@@ -12,8 +11,25 @@ import FoodNews from './component/FoodNews/FoodNews';
 import HealthNews from './component/HealthNews/HealthNews';
 import QuizComponent from './component/Quiz/QuizComponent';
 
-
 const App = () => {
+  const [showArrow, setShowArrow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const halfPageHeight = document.documentElement.scrollHeight / 2;
+      
+      if (scrollPosition > halfPageHeight) {
+        setShowArrow(true);
+      } else {
+        setShowArrow(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <Router>
       <Navbar />
@@ -27,12 +43,11 @@ const App = () => {
         <Route path="/healthNews" element={<HealthNews />} />
         <Route path="/quiz" element={<QuizComponent />} />
       </Routes>
-      <div className='upArrow'>
+      <div className={`upArrow ${showArrow ? 'visible' : 'hidden'}`}>
         <a className='arrow' href="#">↑</a>
       </div>
       <Footer />
     </Router>
-    // <SLIDESHOW/>
   );
 };
 

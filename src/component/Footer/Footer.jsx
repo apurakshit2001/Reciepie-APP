@@ -1,41 +1,48 @@
-import React, { useState } from 'react';
-import axios from 'axios';
+import React, { useState, useRef } from 'react';
 import logo from '../../assets/logo3.png';
+import emailjs from '@emailjs/browser';
+
 const Footer = () => {
-
   // const [email, setEmail] = useState('');
-  //    const [error, setError] = useState(null);
-  //    const [success, setSuccess] = useState(null); 
+  const [message, setMessage] = useState('');
 
-  //    const handleSubscription = () => {
+  const form = useRef();
+  const emailRef = useRef(); 
 
-  //      const url = 'https://cors-anywhere.herokuapp.com/https://us8.api.mailchimp.com/3.0/lists/9c68422a20/members';
+  const handleSendEmail = (e) => {
+    e.preventDefault();
+
+    // Access the email input value directly via ref
+    const email = emailRef.current.value;
+
+    // Define the email parameters
+    const templateParams = {
+      to_email: email,
+      message: "This is an example message!",
+    };
+
+    // Send email using EmailJS
+    emailjs
+      .send(
+        'service_sxhttmh', // Your Service ID
+        'template_j6mbd3i', // Your Template ID
+        templateParams,
+        'wUlKMvdB9BhE8qHxa' // Your Public Key (User ID)
+      )
+      .then(
+        (response) => {
+          console.log('Email sent successfully!', response.status, response.text);
+          setMessage('Email sent successfully!');
+          emailRef.current.value = ''; // Clear the email input
+        },
+        (error) => {
+          console.error('Error sending email:', error);
+          setMessage('Failed to send email. Please try again.');
+        }
+      );
+  };
 
 
-  //      const data = {
-  //        email_address: email,
-  //        status: 'subscribed',
-  //      };
-
-
-  //      axios.post(url, data, {
-  //        headers: {
-  //          'Authorization': `apikey 58fa853e9cd6b466a956be537b55cca5-us8`,
-  //          'Content-Type': 'application/json',
-  //        }
-  //      })
-  //      .then(response => {
-  //        console.log('Success!', response.data);
-  //        setSuccess('Subscription successful!'); 
-  //        setEmail('');
-  //        setError(null); 
-  //      })
-  //      .catch(error => {
-  //        console.error('Error subscribing:', error);
-  //        setError('Subscription failed. Please try again.'); 
-  //        setSuccess(null); 
-  //      });
-  //    }; 
   return (
     <footer className="footer">
       <section>
@@ -158,8 +165,9 @@ const Footer = () => {
                         <h4 className="widget-title mb-4">Our Newsletter</h4>
                         <p className="mb-4">Never miss out on our company's latest news, updates, and exclusive offers! Subscribe to our newsletter today and get the inside scoop delivered straight to your inbox.</p>
                         <form action="#!"
-                        //  onSubmit={handleSubscription}
-                         >
+                          onSubmit={handleSendEmail}
+                          ref={form}
+                        >
                           <div className="row gy-4">
                             <div className="col-12">
                               <div className="input-group">
@@ -168,9 +176,11 @@ const Footer = () => {
                                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z" />
                                   </svg>
                                 </span>
-                                <input type="email" className="form-control" id="email-newsletter" 
-                                //value={email}
-                                  // onChange={(e) => setEmail(e.target.value)}
+                                <input
+                                  type="email"
+                                  className="form-control"
+                                  id="email-newsletter"
+                                  ref={emailRef} // Attach ref to the email input
                                   placeholder="Email Address"
                                   aria-label="email-newsletter"
                                   aria-describedby="email-newsletter-addon"
@@ -180,7 +190,8 @@ const Footer = () => {
                             </div>
                             <div className="col-12">
                               <div className="d-grid">
-                                <button className=" btn2" type="submit" style={{margin: "0 10px 10px 10px"}}>
+                                {message && <p>{message}</p>}
+                                <button className=" btn2" type="submit" style={{ margin: "0 10px 10px 10px" }}>
                                   <span>Subscribe</span>
                                 </button>
                               </div>

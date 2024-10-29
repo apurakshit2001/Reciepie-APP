@@ -86,7 +86,7 @@
 }
 
 .side-navbar a {
-    padding: 20px 15px;
+    padding: 15px 15px;
     text-decoration: none;
     text-align: center;
     font-size: 18px;
@@ -106,7 +106,9 @@
         width: 60%;
     }
     .side-navbar a {
-        padding: 20px 15px;}
+        padding: 15px 15px;
+        text-align: left;
+    }
 }
 .side-navbar a:hover {
     background-color: #1b021d54;
