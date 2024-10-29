@@ -223,3 +223,10 @@ button span:hover {
   opacity: 1;
   visibility: visible;
 }
+
+@media screen and (max-width: 768px) {
+  .subscribeBtn{
+    margin-bottom: 10px;
+    margin-top: -10px;
+  }
+}

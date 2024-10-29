@@ -133,5 +133,9 @@
         box-shadow: 3px 3px;
         padding: 10px 0;
     }
+    .topRecipe{
+      color: black !important;
+      margin-bottom: 0;
+    }
   }
   

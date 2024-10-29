@@ -191,7 +191,7 @@ const Footer = () => {
                             <div className="col-12">
                               <div className="d-grid">
                                 {message && <p>{message}</p>}
-                                <button className=" btn2" type="submit" style={{ margin: "0 10px 10px 10px" }}>
+                                <button className="subscribeBtn btn2" type="submit">
                                   <span>Subscribe</span>
                                 </button>
                               </div>
