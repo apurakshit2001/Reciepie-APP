@@ -121,7 +121,9 @@
   .randomRecipe-source a:hover {
     text-decoration: underline;
   }
-  
+  .topRecipe{
+    -webkit-text-stroke: 1px #000;
+  }
   /* Responsive adjustments */
   @media (max-width: 768px) {
     .randomRecipe-container {
