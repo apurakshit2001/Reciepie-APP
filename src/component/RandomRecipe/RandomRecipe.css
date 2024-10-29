@@ -134,8 +134,11 @@
         padding: 10px 0;
     }
     .topRecipe{
-      color: black !important;
-      margin-bottom: 0;
+      color: #333 !important;
+      margin-bottom: 5px;
+      font-size: 2rem;
+      font-weight: 500;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     }
   }
   

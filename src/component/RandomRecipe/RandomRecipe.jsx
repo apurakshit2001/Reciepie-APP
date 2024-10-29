@@ -40,7 +40,7 @@ const RandomRecipe = () => {
     return (
         <div className="randomRecipe-container">
             <div className="randomLeftSide">
-                <h1 className='recipeHeading topRecipe'>Top Recipe</h1>
+                <h1 className=' topRecipe'>Top Recipe</h1>
                 <h1 className="randomRecipe-title">{randomRecipe.strMeal}</h1>
                 <img className="randomRecipe-image" src={randomRecipe.strMealThumb} alt={randomRecipe.strMeal} />
             </div>
