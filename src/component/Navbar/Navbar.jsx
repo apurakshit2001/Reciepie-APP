@@ -16,7 +16,7 @@ const Navbar = () => {
                 <div className="menu-btn openMenuButton" >
                     <div className="logo-box">
                         <img src={logo} alt="" />
-                        <h1 id='logoTxt'>Recipe Haven</h1>
+                        <h1 id='logoTxt'>Recipe Heaven</h1>
                     </div>
                     <div onClick={toggleMenu} className={`toggle ${isMenuOpen ? 'active' : ''}`}>
                         <div className="bar"></div>

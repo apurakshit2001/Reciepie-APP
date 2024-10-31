@@ -33,7 +33,7 @@ const Home = () => {
     <div className="home">
       <div className="hero">
         <div className="heroTextContainer">
-          <h1 className='heroMainTxt'><span className='large'>Welcome to,</span> <br /> <span className='title'>Recipe Haven</span></h1>
+          <h1 className='heroMainTxt'><span className='large'>Welcome to,</span> <br /> <span className='title'>Recipe Heaven</span></h1>
           <h1 className='heroPara'>Your ultimate destination for delicious recipes and nutrition insights.</h1>
         <button className="get-started-btn">
           <span><Link className="no-decoration" to='/recipe-search'>Get Started</Link></span>
